@@ -8,14 +8,4 @@
 	<select id="getMember" resultType="MemberVO">
 		select * from user1 where userid=#{userid}
 	</select>
-	<insert id="addMember">
-		insert into user1 (userid, pwd, name, email, tel, birth) 
-		values (#{userid}, #{pwd}, #{name}, #{email},#{tel}, #{birth})
-	</insert>
-	<select id="login" resultType="MemberVO">
-		select * from user1 where userid=#{userid}
-	</select>
-	<select id="checkId" resultType="int">
-		select count(*) from user1 where userid=#{userid}
-	</select>
 </mapper>
