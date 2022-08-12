@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" xmls:th="http://www.thymeleaf.org" xmls:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<th:block th:replace="/layouts/head :: headFragment"></th:block>
+<body>
+<header id="header">
+	<th:block th:replace="/layouts/top :: topFragment"></th:block>
+</header>
+<div class="callout large primary">
+  <div class="row column text-center">
+    <h1>Our Blog</h1>
+    <h2 class="subheader">Such a Simple Blog Layout</h2>
+  </div>
+</div>
+<div class="row medium-8 large-7 columns">
+  <div class="blog-post">
+    <h2>Member List</h2>
+    <form action="login.do" role="form" method="post" th:object="${member}">
+    	<div class="grid-container">
+			<div class="grid-x grid-padding-x">
+				<div class="medium-6 cell">
+					<label>아이디:
+						<input type="text" th:field="*{userid}" placeholder="아이디 입력">   			
+					</label>
+				</div>
+				<div class="medium-6 cell">
+					<label>비밀번호:
+						<input type="password" th:field="*{pwd}" placeholder="비밀번호 입력">   			
+					</label>
+				</div>
+				<div class="medium-6 cell">
+					<div class="input-group-button">
+						<input type="submit" class="button" value="로그인">
+						<input type="reset" class="button" value="취소">
+					</div>
+				</div>
+    		</div>	
+    	</div>
+    </form>
+  </div>    
+</div>  
+ <th:block th:replace="/layouts/footer :: footerFragment"></th:block>   
+</body>
+</html>

@@ -16,4 +16,8 @@ public interface MemberDAO {
 	public MemberVO login(String userid) throws Exception;
 	
 	public int checkId(String userid) throws Exception;
+	
+	public void updateMember(String userid) throws Exception;
+	
+	public void deleteMember(String userid) throws Exception;
 }
