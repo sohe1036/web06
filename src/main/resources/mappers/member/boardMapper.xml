@@ -10,7 +10,7 @@
 	</select>
 	<insert id="addBoard">
 		insert into board (bno, title, content, visited, resdate) 
-		values (board_seq.naxtval, #{title}, #{content} , 0, sysdate)
+		values (board_seq.nextval, #{title}, #{content} , 0, sysdate)
 	</insert>
 	<update id="updateBoard">
 		update board set title=#{title}, content=#{content} where bno=#{bno}
